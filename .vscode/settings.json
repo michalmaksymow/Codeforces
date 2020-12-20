@@ -46,6 +46,8 @@
         "list": "cpp",
         "unordered_map": "cpp",
         "unordered_set": "cpp",
-        "xhash": "cpp"
+        "xhash": "cpp",
+        "set": "cpp",
+        "xtree": "cpp"
     }
 }
