@@ -1,6 +1,8 @@
 #include <iostream>
 #include <list>
 #include <string>
+#include <cmath>
+#include <vector>
 
 using namespace std;
 
@@ -8,24 +10,33 @@ int main()
 {
     int cases;
     cin >> cases;
-    
-    list<int> ans1, ans2;
     string read;
+    vector<string> readNums;
+
     for (size_t i = 0; i < cases; i++)
     {
         cin >> read;
+        readNums.push_back(read);
+    }
+
+    list<int> ans1, ans2;
+    int num;
+    for (size_t i = 0; i < cases; i++)
+    {
+        read = readNums[i];
         ans1.push_back(0);
         for (size_t j = 0; j < read.size(); j++)
         {
-            if (read[read.size() - j] != '0')
+            if (read[read.size() - j - 1] != '0')
             {
-                ans2.push_back((read[read.size() - j] - '0') * j * 10);
+                num = (read[read.size()-j-1]-'0') * ceil(pow(10, j));
+                ans2.push_back(num);
                 ans1.back()++;
             }
         }
     }
 
-    for (size_t i = 0; i < ans1.size(); i++)
+    for (size_t i = 0; i < cases; i++)
     {
         cout << ans1.front() << '\n';
         for (size_t j = 0; j < ans1.front(); j++)
@@ -36,7 +47,6 @@ int main()
         cout << '\n';
         ans1.pop_front();
     }
-    
 
     return 0;
 }
