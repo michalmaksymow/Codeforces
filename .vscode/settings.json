@@ -49,6 +49,7 @@
         "xhash": "cpp",
         "set": "cpp",
         "xtree": "cpp",
-        "map": "cpp"
+        "map": "cpp",
+        "numeric": "cpp"
     }
 }
