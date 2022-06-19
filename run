@@ -1,0 +1,16 @@
+#!/bin/sh
+STD_VERSION="c++2a"
+OPTIMIZATION_LEVEL="O2"
+
+# Compiling executable
+g++ "$1" \
+-std=$STD_VERSION \
+-Wall -Wpedantic -Werror \
+-$OPTIMIZATION_LEVEL \
+
+# Running compiled output
+./a.out
+
+# Cleaning up
+find . -name "*.out" -type f -delete
+find . -name "*.hpp.gch" -type f -delete
