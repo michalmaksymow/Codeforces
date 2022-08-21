@@ -9,6 +9,7 @@ g++ "$1" \
 -$OPTIMIZATION_LEVEL \
 
 # Running compiled output
+echo "Successfully compiled, running..."
 ./a.out
 
 # Cleaning up
