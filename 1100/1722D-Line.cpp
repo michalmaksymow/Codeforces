@@ -29,15 +29,25 @@ int main() {
       continue;
     }
 
-    long long initial = sum(line, length);
+    long long curr = sum(line, length);
     std::vector<long long> inc{};
     for (size_t i = 0; i < length; ++i) {
       if (line[i] == 'L') {
-        inc.push_back(i);
+        inc.push_back((length - 1 - i) - i);
       } else {
-        inc.push_back(length - 1 - i);
+        inc.push_back(i - (length - i - 1));
       }
     }
-    std::sort(inc.begin(), inc.end());
+
+    std::sort(inc.rbegin(), inc.rend());
+
+    for (size_t i = 0; i < inc.size(); ++i) {
+      if (inc[i] >= 0) {
+        curr += inc[i];
+      }
+      inc[i] = curr;
+      std::cout << curr << ' ';
+    }
+    std::cout << '\n';
   }
 }
