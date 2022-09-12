@@ -5,7 +5,7 @@ OPTIMIZATION_LEVEL="O2"
 # Compiling executable
 g++ "$1" \
 -std=$STD_VERSION \
--Wall -Wpedantic -Werror \
+-Wall -Wpedantic \
 -$OPTIMIZATION_LEVEL \
 
 # Running compiled output
