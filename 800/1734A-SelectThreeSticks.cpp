@@ -12,19 +12,21 @@ int main() {
     std::cin >> sticks;
 
     std::vector<int> lengths{};
-    int read;
+    int read{};
     for (int i = 0; i < sticks; i++) {
       std::cin >> read;
       lengths.push_back(read);
     }
     std::sort(lengths.begin(), lengths.end());
 
-    std::vector<int> differences{};
-    for (int i = 0; i < sticks - 1; i++) {
-      differences.push_back(std::abs(lengths[i] - lengths[i + 1]));
+    int min{2147483647};
+    for (size_t i = 0; i < lengths.size() - 2; ++i) {
+      int curr = lengths[i + 2] - lengths[i];
+      if (curr < min) {
+        min = curr;
+      }
     }
-    std::sort(differences.begin(), differences.end());
 
-    std::cout << differences[0] + differences[1] + differences[2] << '\n';
+    std::cout << min << '\n';
   }
 }
