@@ -1,5 +1,5 @@
 #!/bin/sh
-STD_VERSION="c++2a"
+STD_VERSION="gnu++2a"
 OPTIMIZATION_LEVEL="O2"
 
 # Compiling executable
