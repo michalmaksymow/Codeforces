@@ -4,6 +4,6 @@ My collection of solutions for [Codeforces](https://codeforces.com/) problems. I
 
 ---
 
-Copyright &copy; 2021, 2022 Michal Maksymow. All rights reserved. No warranty.
+Copyright &copy; 2021-2023 Michal Maksymow. All rights reserved. No warranty.
 This code is provided for reference only. You may republish any of this code verbatim with author and URL info intact.
 You need written permission from the author to make modifications to the code, include parts into your own work, etc.
